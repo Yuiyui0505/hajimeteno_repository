@@ -18,7 +18,7 @@
                 <h2>Body</h2>
                 <textarea name="post[body]" placeholder="今日も一日お疲れさまでした。"></textarea>
             </dev>
-            <input type="submit" value="store">
+            <input type="submit" value="store"/>
         </form>
         <div class='footer'>
             <a href="/">戻る</a>
