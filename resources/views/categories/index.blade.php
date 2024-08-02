@@ -13,8 +13,8 @@
             @foreach($posts as $post)
                <div class='post'>
                  <a href="/posts/{{ $post->id }}"><h2 class='title'>{{ $post->title }}</h2></a>
+                 <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}test</a>
                  <p class='body'>{{ $post->body }}</p>
-                 <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
                  <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post">
                      @csrf
                      @method('DELETE')
@@ -22,6 +22,7 @@
                  </form>
                </div>
             @endforeach
+            <a href="/posts/create">戻る</a>
         </div>
         <div class='paginate'>
             {{ $posts->links() }}
